@@ -7,8 +7,9 @@
 <!-- the Compile on Save feature is turned off for the project. -->
 <!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
 <!-- in the project's Project Properties dialog box.-->
-<project name="Quiz" default="default" basedir=".">
-    <description>Builds, tests, and runs the project Quiz.</description>
+<project name="com.quiz.quiz.Quiz" default="default" basedir=".">
+    <target name="default"/>
+    <description>Builds, tests, and runs the project com.quiz.quiz.Quiz.</description>
     <import file="nbproject/build-impl.xml"/>
     <!--
 
