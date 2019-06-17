@@ -1,4 +1,4 @@
-# Quiz maker
+# Quiz
 
 * A program that makes quizes
 
