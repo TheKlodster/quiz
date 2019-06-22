@@ -12,7 +12,7 @@ public class Quiz
 	private int firstNo = 0;
 	private int secondNo = 0;
 
-	public String getNextQuestion(int nxt)
+	public String getNextQuestion()
 	{
 		int firstNo = random.nextInt(20);
 		int secondNo = random.nextInt(20);
@@ -29,10 +29,32 @@ public class Quiz
 		return "What is " + firstNo + " " + operator[i] + " " + secondNo + " = ";
 	}
 
-	public boolean checkAnswer(int inputAnswer, int nxt)
+	public boolean checkAnswer(int inputAnswer, String question)
 	{
 		int answer = 0;
-		switch (operator[nxt])
+		if (question.contains("+"))
+		{
+			answer = (firstNo + secondNo);
+		}
+		else if (question.contains("-"))
+		{
+			answer = (firstNo - secondNo);
+		}
+		else if (question.contains("x"))
+		{
+			answer = (firstNo * secondNo);
+		}
+		else if (question.contains("%"))
+		{
+			answer = (firstNo % secondNo);
+		}
+		return inputAnswer == answer;
+	}
+
+	public int getAnswer(int nxt)
+	{
+		int answer = 0;
+		switch (operator[nxt-1])
 		{
 			case "+":
 				answer = (firstNo + secondNo);
@@ -48,6 +70,6 @@ public class Quiz
 				break;
 		}
 
-		return inputAnswer == answer;
+		return answer;
 	}
 }

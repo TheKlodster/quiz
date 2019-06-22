@@ -23,7 +23,7 @@ public class File {
 
     public File() {
         try {
-            fileName = "QuizConsole Scores.txt";
+            fileName = "Quiz Scores.txt";
             try {
                 output = new PrintWriter(new FileOutputStream(fileName, true));
                 file = new BufferedReader(new FileReader("QuizConsole Scores.txt"));

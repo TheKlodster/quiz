@@ -5,12 +5,12 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import org.omg.PortableServer.POA;
+
+import java.util.Optional;
 
 public class GUI extends Application
 {
@@ -18,6 +18,7 @@ public class GUI extends Application
 	private Stage primaryStage;
 	private Quiz quizGame;
 	private int nxt;
+	private int correct;
 
 	@Override
 	public void start(Stage primaryStage)
@@ -25,6 +26,7 @@ public class GUI extends Application
 		this.primaryStage = primaryStage;
 		this.quizGame = new Quiz();
 		nxt = 1;
+		correct = 0;
 		menu();
 	}
 
@@ -65,12 +67,74 @@ public class GUI extends Application
 		Label title = new Label("Question " + nxt);
 		title.setStyle("-fx-font-size: 18px; -fx-font-weight: bold;");
 		title.setPadding(new Insets(10,0,10,0));
-		Label qLabel = new Label(quizGame.getNextQuestion(nxt));
+		Label qLabel = new Label(quizGame.getNextQuestion());
 		qLabel.setPadding(new Insets(10,0,10,0));
 		TextField answerField = new TextField();
 		answerField.setAlignment(Pos.CENTER);
 		answerField.setMaxWidth(100);
 		Button submitBtn = new Button("Submit");
+		submitBtn.setOnAction(event ->
+		{
+			if (!answerField.getText().equals(""))
+			{
+				nxt++;
+				if (quizGame.checkAnswer(Integer.parseInt(answerField.getText()), qLabel.getText()))
+				{
+					answerField.setStyle(null);
+					if (nxt <= 10)
+					{
+						quiz();
+						correct++;
+					}
+					else
+					{
+						String msg;
+						if (correct == 10)
+						{
+							msg = "all of the questions correctly";
+						}
+						else
+						{
+							msg = correct + "/10 questions correctly";
+						}
+
+						Alert fin = new Alert(Alert.AlertType.INFORMATION, "The quiz has finished You answered " + msg, ButtonType.FINISH);
+						fin.setHeaderText("Finished");
+						Optional<ButtonType> result =  fin.showAndWait();
+						if (result.isPresent())
+						{
+							if (result.get() == ButtonType.FINISH)
+							{
+								nxt = 1;
+								menu();
+							}
+						}
+					}
+				}
+				else
+				{
+					Alert wrong = new Alert(Alert.AlertType.ERROR, "The answer should be: " + quizGame.getAnswer(nxt), ButtonType.NEXT);
+					wrong.setHeaderText("Wrong answer");
+					Optional<ButtonType> result = wrong.showAndWait();
+					if (result.isPresent())
+					{
+						if (result.get() == ButtonType.NEXT)
+						{
+							quiz();
+						}
+					}
+					nxt--;
+
+				}
+			}
+			else
+			{
+				Alert empty = new Alert(Alert.AlertType.WARNING, "Answer box is empty, type something in");
+				empty.setHeaderText("Empty answer box");
+				empty.showAndWait();
+				answerField.setStyle(null);
+			}
+		});
 		submitBtn.setMaxWidth(100);
 		baseGUI(root, new Node[] { title, qLabel, answerField, submitBtn});
 	}
