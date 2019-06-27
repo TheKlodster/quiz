@@ -31,6 +31,12 @@ public class Quiz
 
 	public boolean checkAnswer(int inputAnswer, String question)
 	{
+		int answer = getAnswer(question);
+		return inputAnswer == answer;
+	}
+
+	public int getAnswer(String question)
+	{
 		int answer = 0;
 		if (question.contains("+"))
 		{
@@ -48,28 +54,6 @@ public class Quiz
 		{
 			answer = (firstNo % secondNo);
 		}
-		return inputAnswer == answer;
-	}
-
-	public int getAnswer(int nxt)
-	{
-		int answer = 0;
-		switch (operator[nxt-1])
-		{
-			case "+":
-				answer = (firstNo + secondNo);
-				break;
-			case "-":
-				answer = (firstNo - secondNo);
-				break;
-			case "x":
-				answer = (firstNo * secondNo);
-				break;
-			case "%":
-				answer = (firstNo % secondNo);
-				break;
-		}
-
 		return answer;
 	}
 }
