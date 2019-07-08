@@ -1,6 +1,5 @@
 import java.util.Random;
 import java.util.Scanner;
-import javax.swing.JFrame;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.regex.Pattern;
@@ -8,14 +7,11 @@ import java.util.regex.Pattern;
 public class Quiz {
     
     private static Scanner scan = new Scanner(System.in);
-    private static String fn;
-    private static String sn;
+    private static String fn, sn;
     private int score = 0;
+    private int time = 0;
     private Random random = new Random();
     private String[] operator = {"+","-","x","%"};
-    private int time = 0;
-    private boolean running = false;
-    private File file;
     
     private Timer stopwatch = new Timer();
     private TimerTask task = new TimerTask() {
@@ -27,16 +23,6 @@ public class Quiz {
     public Quiz(String fn, String sn) {
         this.fn = fn;
         this.sn = sn;
-        file = new File();
-    }
-    
-    public void setFrame() {
-        JFrame window = new JFrame("Quiz");
-        window.setSize(1000,1000);
-        window.setLocationRelativeTo(null);
-        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        window.setVisible(false);
-        
     }
     
     public void getName() {
@@ -95,11 +81,15 @@ public class Quiz {
                 System.out.println(checkAnswer(inputAnswer, answer));
             }
         }
+        stop();
+
         System.out.println("Your score is " + score + "/10");
         System.out.println("Your time was : " + time + " seconds.");
-        stopwatch.cancel();
-        file.getScore(fn, sn, score, time);
-        
+        System.out.println("**SCORES SAVED**");
+
+        Score scores = new Score();
+        scores.giveScore(fn, sn, score, time);
+        scores.setScore();
     }
     
     public String checkAnswer(int inputAnswer, int answer) {
@@ -114,10 +104,13 @@ public class Quiz {
     public void start() {
         stopwatch.scheduleAtFixedRate(task, 1000, 1000);
     }
+    
+    public void stop() {
+        stopwatch.cancel();
+    }
 
     public static void main(String[] args) {
         Quiz start = new Quiz(fn,sn);
-        start.setFrame();
         start.getName();
         start.quiz();
     }
