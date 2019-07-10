@@ -1,0 +1,9 @@
+.btn, .qBtn{
+    -fx-focus-color: -fx-control-inner-background ;
+    -fx-faint-focus-color: -fx-control-inner-background ;
+    -fx-background-color: transparent;
+}
+
+.qBtn:pressed{
+    -fx-background-color: #B2B2B2;
+}

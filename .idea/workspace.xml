@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6683cde-8db7-423b-bf49-c1b63a5f824c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/css/GUI.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/quiz/quiz/DragContext.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quiz.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quiz/com/quiz/quiz/File.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quiz/com/quiz/quiz/File.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Quiz/com/quiz/quiz/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quiz/com/quiz/quiz/GUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quiz/com/quiz/quiz/Quiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quiz/com/quiz/quiz/Quiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/quiz/quiz/File.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/quiz/quiz/File.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/quiz/quiz/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/quiz/quiz/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/quiz/quiz/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/quiz/quiz/Quiz.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,23 +26,34 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/quiz/quiz/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="577">
-              <caret line="77" column="11" selection-start-line="77" selection-start-column="11" selection-end-line="77" selection-end-column="11" />
+            <state relative-caret-position="182">
+              <caret line="138" column="8" selection-start-line="138" selection-start-column="8" selection-end-line="138" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#start#0;class#GUI#0" />
+                <element signature="method#menu#0;class#GUI#0" />
+                <element signature="method#quiz#0;class#GUI#0" />
                 <element signature="method#checkAnswer#0;class#GUI#0" />
-                <element signature="e#4114#4115#0" expanded="true" />
-                <element signature="e#4133#4134#0" expanded="true" />
+                <element signature="method#makeDraggable#0;class#GUI#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/quiz/quiz/Quiz.java">
+        <entry file="file://$PROJECT_DIR$/resources/css/GUI.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
+            <state relative-caret-position="140">
+              <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/quiz/quiz/File.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="520">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
         </entry>
@@ -50,13 +64,25 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>set</find>
+      <find>dragContext.initialTranslateX</find>
+      <find>dragContext.initialTranslateY</find>
+      <find>dragModeActiveProperty.get()</find>
+      <find>isDraggable</find>
+      <find>ImageV</find>
     </findStrings>
+    <replaceStrings>
+      <replace>dragContext.getInitialTranslateX()</replace>
+      <replace>dragContext.getInitialTranslateY()</replace>
+      <replace>isDraggable</replace>
+      <replace>dragModeActiveProperty.get()</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -78,15 +104,26 @@
         <option value="$PROJECT_DIR$/build.xml" />
         <option value="$PROJECT_DIR$/src/com/quiz/quiz/padding.java" />
         <option value="$PROJECT_DIR$/src/com/quiz/quiz/QuizConsole.java" />
-        <option value="$PROJECT_DIR$/src/com/quiz/quiz/File.java" />
         <option value="$PROJECT_DIR$/src/com/quiz/quiz/Quiz.java" />
+        <option value="$PROJECT_DIR$/src/com/quiz/quiz/DragContext.java" />
+        <option value="$PROJECT_DIR$/src/com/quiz/quiz/LineManipulator.java" />
+        <option value="$PROJECT_DIR$/src/com/quiz/quiz/File.java" />
+        <option value="$PROJECT_DIR$/src/com/quiz/quiz/GUI.css" />
+        <option value="$PROJECT_DIR$/src/GUI.css" />
+        <option value="$PROJECT_DIR$/resources/css/GUI.css" />
         <option value="$PROJECT_DIR$/src/com/quiz/quiz/GUI.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="350" />
-    <option name="y" value="-11" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="673" />
+    <option name="y" value="-8" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -95,12 +132,19 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Quiz" type="b2602c69:ProjectViewProjectNode" />
               <item name="Quiz" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Quiz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Quiz" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Quiz" type="b2602c69:ProjectViewProjectNode" />
@@ -117,15 +161,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../java_fx_node_link_demo" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -135,7 +178,22 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="application.passwordSafe" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Rohit\Documents\GitHub\Quiz\resources\css" />
+      <recent name="C:\Users\Rohit\Documents\GitHub\Quiz\resources\images" />
+      <recent name="C:\Users\Rohit\Documents\GitHub\Quiz\resources" />
+      <recent name="C:\Users\Rohit\Documents\GitHub\Quiz\src\com\quiz\quiz" />
+      <recent name="C:\Users\Rohit\Documents\GitHub\Quiz\src" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="npm i everything" />
+    </option>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -201,18 +259,31 @@
       <workItem from="1561228596800" duration="3476000" />
       <workItem from="1561288630907" duration="3395000" />
       <workItem from="1561474479218" duration="1503000" />
-      <workItem from="1561634409319" duration="1761000" />
+      <workItem from="1561634409319" duration="3679000" />
+      <workItem from="1561818789085" duration="9154000" />
+      <workItem from="1561895314732" duration="3240000" />
+      <workItem from="1561914832325" duration="92000" />
+      <workItem from="1561923119324" duration="4024000" />
+      <workItem from="1562003180313" duration="8465000" />
+      <workItem from="1562082819755" duration="10763000" />
+      <workItem from="1562102795233" duration="291000" />
+      <workItem from="1562164913984" duration="724000" />
+      <workItem from="1562185474860" duration="2813000" />
+      <workItem from="1562265429190" duration="4156000" />
+      <workItem from="1562406816409" duration="3343000" />
+      <workItem from="1562620293478" duration="9976000" />
+      <workItem from="1562685207933" duration="10082000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37966000" />
+    <option name="totallyTimeSpent" value="107007000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1296875" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12916666" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -222,14 +293,14 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32910052" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32910052" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37037036" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32910052" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32910052" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" />
@@ -273,40 +344,75 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/quiz/quiz/padding.java" />
     <entry file="file://$PROJECT_DIR$/QuizConsole Scores.txt" />
-    <entry file="file://$PROJECT_DIR$/src/com/quiz/quiz/File.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_212/javafx-src.zip!/javafx/scene/Scene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="25" column="28" lean-forward="true" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+        <state relative-caret-position="189">
+          <caret line="222" selection-start-line="222" selection-end-line="222" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/quiz/quiz/QuizConsole.java">
+    <entry file="file://$PROJECT_DIR$/src/com/quiz/quiz/DragContext.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-283">
-          <caret line="96" column="13" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
+        <state relative-caret-position="80">
+          <caret line="4" column="32" lean-forward="true" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_212/javafx-src.zip!/javafx/scene/layout/Border.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-884">
+          <caret line="226" column="11" selection-start-line="226" selection-start-column="11" selection-end-line="226" selection-end-column="11" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#10000#10001#0" expanded="true" />
+            <element signature="e#10035#10036#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/quiz/quiz/GUI.java">
+    <entry file="file://$PROJECT_DIR$/src/com/quiz/quiz/LineManipulator.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/quiz/quiz/QuizConsole.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="77" column="11" selection-start-line="77" selection-start-column="11" selection-end-line="77" selection-end-column="11" />
+        <state relative-caret-position="1267">
+          <caret line="143" column="32" selection-start-line="143" selection-start-column="32" selection-end-line="143" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#checkAnswer#0;class#GUI#0" />
-            <element signature="e#4114#4115#0" expanded="true" />
-            <element signature="e#4133#4134#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/quiz/quiz/Quiz.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
+        <state relative-caret-position="-73">
           <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/quiz/quiz/File.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/GUI.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/quiz/quiz/GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="138" column="8" selection-start-line="138" selection-start-column="8" selection-end-line="138" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#start#0;class#GUI#0" />
+            <element signature="method#menu#0;class#GUI#0" />
+            <element signature="method#quiz#0;class#GUI#0" />
+            <element signature="method#checkAnswer#0;class#GUI#0" />
+            <element signature="method#makeDraggable#0;class#GUI#0" />
+          </folding>
         </state>
       </provider>
     </entry>
