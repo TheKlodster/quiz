@@ -26,7 +26,7 @@ public class File {
             fileName = "Quiz Scores.txt";
             try {
                 output = new PrintWriter(new FileOutputStream(fileName, true));
-                file = new BufferedReader(new FileReader("Quiz Scores.txt"));
+                file = new BufferedReader(new FileReader("QuizConsoleScores.txt"));
                 
             } catch (FileNotFoundException ex) {
                 Logger.getLogger(File.class.getName()).log(Level.SEVERE, null, ex);
