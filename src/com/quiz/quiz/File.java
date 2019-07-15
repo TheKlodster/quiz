@@ -23,10 +23,10 @@ public class File {
 
     public File() {
         try {
-            fileName = "Quiz Scores.txt";
+            fileName = "QuizConsole Scores.txt";
             try {
                 output = new PrintWriter(new FileOutputStream(fileName, true));
-                file = new BufferedReader(new FileReader("Quiz Scores.txt"));
+                file = new BufferedReader(new FileReader("QuizConsole Scores.txt"));
                 
             } catch (FileNotFoundException ex) {
                 Logger.getLogger(File.class.getName()).log(Level.SEVERE, null, ex);

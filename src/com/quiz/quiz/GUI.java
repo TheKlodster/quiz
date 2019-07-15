@@ -25,9 +25,10 @@ public class GUI extends Application
 	private void menu()
 	{
 		VBox root = new VBox();
-		Label title = new Label("Quiz");
+		Label title = new Label("QuizConsole");
 		title.setStyle("-fx-font-size: 18px; -fx-font-weight: bold;");
-		Button btnQuiz = new Button("Quiz");
+		Button btnQuiz = new Button("QuizConsole");
+		btnQuiz.setOnAction(event -> quiz());
 		Button btnCreate = new Button("Create");
 		Button btnQuit = new Button("Quit");
 		btnQuit.setOnAction(event -> System.exit(0));
@@ -35,6 +36,15 @@ public class GUI extends Application
 		root.setPadding(new Insets(10));
 		root.setAlignment(Pos.CENTER);
 		root.setSpacing(10.00);
+		Scene scene = new Scene(root, 250, 250);
+		primaryStage.setScene(scene);
+		primaryStage.show();
+	}
+
+	private void quiz()
+	{
+		VBox root = new VBox();
+
 		Scene scene = new Scene(root, 250, 250);
 		primaryStage.setScene(scene);
 		primaryStage.show();
