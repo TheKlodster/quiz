@@ -1,9 +1,19 @@
-.btn, .qBtn{
+.btns, .qBtn{
     -fx-focus-color: -fx-control-inner-background ;
     -fx-faint-focus-color: -fx-control-inner-background ;
     -fx-background-color: transparent;
 }
 
-.qBtn:pressed{
-    -fx-background-color: #B2B2B2;
+.qBtn:selected{
+    -fx-text-fill: #333;
+    -fx-fill: #333;
+    -fx-background-color: #e6e6e6;
+    -fx-border-color: #adadad;
+}
+
+.qBtn:hover{
+    -fx-text-fill: #333;
+    -fx-fill: #333;
+    -fx-background-color: #d4d4d4;
+    -fx-border-color: #8c8c8c;
 }
