@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 
 
 /**
- * The basic quiz game made for the console
+ * The basic com.quiz.quiz.quiz game made for the console
  * Will be converted to be used with the GUI file
  */
 public class QuizConsole

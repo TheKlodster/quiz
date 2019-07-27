@@ -1,13 +1,10 @@
 package com.quiz.quiz;
 
-import com.sun.org.apache.regexp.internal.RECompiler;
 import javafx.application.Application;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.Cursor;
-import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -20,11 +17,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.input.TransferMode;
 import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import java.util.Optional;
 
@@ -246,7 +240,7 @@ public class GUI extends Application
 						msg = correct + "/10 questions correctly";
 					}
 
-					Alert fin = new Alert(Alert.AlertType.INFORMATION, "The quiz has finished You answered " + msg, ButtonType.FINISH);
+					Alert fin = new Alert(Alert.AlertType.INFORMATION, "The com.quiz.quiz.quiz has finished You answered " + msg, ButtonType.FINISH);
 					fin.setHeaderText("Finished");
 					Optional<ButtonType> result = fin.showAndWait();
 					if (result.isPresent())
@@ -298,52 +292,5 @@ public class GUI extends Application
 		bp.setRight(r);
 		bp.setLeft(l);
 		return bp;
-	}
-
-	private Node makeDraggable(final Node node)
-	{
-		final DragContext dragContext = new DragContext();
-		final Group wrapGroup = new Group(node);
-
-		wrapGroup.addEventFilter(
-				MouseEvent.ANY,
-				mouseEvent ->
-				{
-					if (dragModeActiveProperty.get())
-					{
-						// disable mouse events for all children
-						mouseEvent.consume();
-					}
-				});
-
-		wrapGroup.addEventFilter(
-				MouseEvent.MOUSE_PRESSED,
-				mouseEvent ->
-				{
-					if (dragModeActiveProperty.get())
-					{
-						// remember initial mouse cursor coordinates
-						// and node position
-						dragContext.setMouseAnchorX(mouseEvent.getX());
-						dragContext.setMouseAnchorY(mouseEvent.getY());
-						dragContext.setInitialTranslateX(node.getTranslateX());
-						dragContext.setInitialTranslateY(node.getTranslateY());
-					}
-				});
-
-		wrapGroup.addEventFilter(
-				MouseEvent.MOUSE_DRAGGED,
-				mouseEvent ->
-				{
-					if (dragModeActiveProperty.get())
-					{
-						// shift node from its initial position by delta
-						// calculated from mouse cursor movement
-						node.setTranslateX(dragContext.getInitialTranslateX() + mouseEvent.getX() - dragContext.getMouseAnchorX());
-						node.setTranslateY(dragContext.getInitialTranslateY() + mouseEvent.getY() - dragContext.getMouseAnchorY());
-					}
-				});
-
-		return wrapGroup;
 	}
 }
