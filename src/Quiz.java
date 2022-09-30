@@ -21,8 +21,8 @@ public class Quiz {
         };
         
     public Quiz(String fn, String sn) {
-        this.fn = fn;
-        this.sn = sn;
+        Quiz.fn = fn;
+        Quiz.sn = sn;
     }
     
     public void getName() {
