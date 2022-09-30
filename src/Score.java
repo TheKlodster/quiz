@@ -43,7 +43,7 @@ public class Score {
                 writeFile.newLine();
                 writeFile.close();
             } catch (Exception e) {
-                System.out.println("There is an Error!");
+                System.out.println("There is was an error.");
             }
         }
 
@@ -57,7 +57,7 @@ public class Score {
                     writeFile.newLine();
                     writeFile.close();
                 } catch (Exception e) {
-                    System.out.println("There is an Error!");
+                    System.out.println("There was an error.");
                 }
             }
         }
